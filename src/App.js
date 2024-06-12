@@ -7,9 +7,9 @@ import StarRating from './components/StarRating/StarRating';
 function App() {
   return (
     <div className="App">
-      {/* <Accordian />
+      <Accordian />
       <RandomColor />
-      <StarRating /> */}
+      <StarRating noOfStars={10} />
       <ImageSlider />
     </div>
   );
