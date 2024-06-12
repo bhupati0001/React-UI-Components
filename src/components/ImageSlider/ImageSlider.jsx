@@ -1,4 +1,3 @@
-// src/ImageSlider.js
 import React, { useState, useEffect } from 'react';
 import './ImageSlider.css';
 
@@ -36,6 +35,10 @@ const ImageSlider = () => {
         setCurrentSlide((prev) => (prev - 1 + images.length) % images.length);
     };
 
+    const goToSlide = (index) => {
+        setCurrentSlide(index);
+    };
+
     if (loading) {
         return <p>Loading...</p>;
     }
@@ -50,19 +53,24 @@ const ImageSlider = () => {
                 <button className="prev" onClick={prevSlide}>&#10094;</button>
                 <div className="slides">
                     {images.map((image, index) => (
-
                         <img
                             key={index}
                             src={image.download_url}
                             alt={`Slide ${index}`}
                             className={index === currentSlide ? 'active' : ''}
                         />
-
-
                     ))}
                 </div>
-                <p style={{ textAlign: "center" }}>{currentSlide + 1 + "/" + images.length}</p>
                 <button className="next" onClick={nextSlide}>&#10095;</button>
+            </div>
+            <div className="dots">
+                {images.map((_, index) => (
+                    <span
+                        key={index}
+                        className={`dot ${index === currentSlide ? 'active' : ''}`}
+                        onClick={() => goToSlide(index)}
+                    ></span>
+                ))}
             </div>
         </div>
     );
