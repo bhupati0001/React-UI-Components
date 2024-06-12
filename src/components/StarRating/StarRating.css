@@ -1,0 +1,19 @@
+.stars-rating {
+  display: flex;
+  margin: 10px auto;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: 50vh;
+}
+
+.stars-rating .active {
+  color: gold;
+  font-size: 3em;
+}
+
+.stars-rating .inactive {
+  color: gray;
+  cursor: pointer;
+  font-size: 3em;
+}

@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  margin: 10px auto;
+  width: 50vw;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: blueviolet;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.accordian-container p {
+  padding: 4px;
+  background-color: rgb(209, 181, 234);
+  border-radius: 5px;
+  color: red;
+}
