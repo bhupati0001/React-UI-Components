@@ -57,7 +57,7 @@ const ImageSlider = () => {
                             key={index}
                             src={image.download_url}
                             alt={`Slide ${index}`}
-                            className={index === currentSlide ? 'active' : ''}
+                            className={index === currentSlide ? 'active' : 'inactive'}
                         />
                     ))}
                 </div>
