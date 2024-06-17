@@ -1,0 +1,18 @@
+ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+li div {
+  cursor: pointer;
+  padding: 5px;
+}
+
+li div:hover {
+  text-decoration: underline;
+  background-color: #f0f0f0;
+}
+
+span {
+  margin-left: 5px;
+}

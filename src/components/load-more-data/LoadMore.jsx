@@ -12,13 +12,12 @@ const LoadMore = () => {
 
     const fetchProducts = async (currentPage) => {
         setLoading(true);
-        setError(null);
-
         // Abort any pending fetch request
         if (abortControllerRef.current) {
             abortControllerRef.current.abort();
         }
         abortControllerRef.current = new AbortController();
+
 
         try {
             const response = await fetch(`https://dummyjson.com/products?limit=10&skip=${currentPage * 10}`, {
