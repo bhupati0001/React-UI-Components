@@ -8,6 +8,7 @@ import Test from './components/Test/Test';
 import LoadMore from './components/load-more-data/LoadMore';
 import { menuData } from './components/RecursiveMenu/menuData';
 import { ThemeProvider, ThemeSwitcher } from './contexts/themeContext/ThemContextProvider'
+import QRCodeGenerator from './components/QR/QRCodeGenerator';
 
 
 
@@ -19,13 +20,13 @@ function App() {
       <StarRating noOfStars={10} />
       <ImageSlider />
       <LoadMore />
-      <Menu data={menuData} /> */}
+      <Menu data={menuData} />
       <ThemeProvider>
         <div>
-
           <ThemeSwitcher />
         </div>
-      </ThemeProvider>
+      </ThemeProvider> */}
+      <QRCodeGenerator />
       {/* <Test /> */}
     </div>
   );
